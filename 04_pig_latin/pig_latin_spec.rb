@@ -68,5 +68,13 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "translates capitalized words" do
+    s = translate("Silence Is Golden")
+    expect(s).to eq("Ilencesay Isay Oldengay")
+  end
 
+  it "translates many punctuation" do
+    s = translate("the quick brown Fox, which is quiet.")
+    expect(s).to eq("ethay ickquay ownbray Oxfay, ichwhay isay ietquay.")
+  end
 end
